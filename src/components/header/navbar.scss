@@ -1,0 +1,160 @@
+.navbar {
+  height: 60px;
+  background-color: wheat;
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+.brand {
+  position: relative;
+  max-width: 60px;
+}
+
+.OpenMenuIcon {
+  display: none;
+}
+
+.CloseMenuIcon {
+  visibility: hidden;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  margin-right: 17px;
+
+  opacity: 0; /* Initial opacity */
+  transition: opacity 0.6s ease-in-out;
+}
+.FaMenuIcon,
+.FaCloseIcon {
+  color: #47396d;
+  font-size: 1.4rem;
+  transition: transform 0.2s;
+}
+.nav-elements-container ul {
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  margin-right: 50px;
+}
+
+.nav-elements-container ul {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-elements-container ul li:not(:last-child) {
+  margin-right: 60px;
+}
+.nav-elements-container ul a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #47396d;
+}
+
+.nav-elements-container ul a.active {
+  color: red;
+  position: relative;
+  font-size: 120%;
+}
+
+.nav-elements-container ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}
+
+@media screen and (max-width: '568px') {
+  .nav-elements-container {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-color: wheat;
+    width: 0;
+    height: 100vh;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .navbar.button {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-elements-container.active {
+    width: 270px;
+  }
+
+  .OpenMenuIcon.active {
+    display: none;
+  }
+  .CloseMenuIcon.active {
+    visibility: visible;
+    opacity: 1; /* Initial opacity */
+  }
+  .nav-elements-container ul {
+    //  nav menu elements for mobile
+    padding: 0 30px 0; /* Remove default padding */
+    margin-top: 80px; /* Remove default margin */
+  }
+
+  .nav-elements-container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+  .nav-elements-container ul li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .nav-elements-container ul a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #47396d;
+  }
+  // menubutton
+
+  .OpenMenuIcon {
+    display: block;
+  }
+  .blur {
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+    width: 100vh;
+    background: black;
+    opacity: 0;
+
+    //this dosn't work as wanted whe we change the screen to mobile it starts dark and and then transitions to no opacity we are gonna keep it that way
+
+    //transition: opacity 0.65s ease-in-out, visibility 0s 0.65s;
+  }
+  .blur.active {
+    visibility: visible;
+    opacity: 0.5;
+
+    transition: opacity 0.65s ease-in-out, visibility 0s 0s;
+  }
+}
+
+@media screen and (min-width: '768px') {
+  .header {
+    padding: pxToRem(40);
+  }
+}
+
+@media screen and (min-width: '1024px') {
+  .header {
+    padding: pxToRem(40);
+  }
+}

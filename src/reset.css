@@ -1,0 +1,113 @@
+/* Aggressive CSS Reset */
+
+/* Remove all margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Remove default link styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Remove default list styles */
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  /* Remove default background and border for buttons and inputs */
+  button,
+  input,
+  textarea {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Set default font and line-height */
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Set default display properties */
+  main,
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+    font-weight: normal;
+  }
+  
+  address {
+    font-style: normal;
+  }
+  
+  blockquote,
+  q {
+    quotes: none;
+  }
+  
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  
+  /* Remove table border and spacing */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Remove image border */
+  img {
+    border-style: none;
+  }
+  
+  /* Remove form element inheritances and styling */
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /* Remove all animations and transitions 
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  */
