@@ -4,6 +4,8 @@ import App from './App.jsx'
 import './index.css'
 import 'normalize.css';
 
+import './assets/styles/global.scss'// Import global styles
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

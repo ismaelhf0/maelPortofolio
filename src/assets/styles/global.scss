@@ -1,0 +1,13 @@
+// src/styles/global.scss
+
+@import './variables';
+@import './mixins';
+@import './themes/light_navbarController.scss';
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font: $font-large-bold;
+  margin: 0;
+  padding: 0;
+}
