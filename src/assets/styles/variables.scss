@@ -1,14 +1,26 @@
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300&display=swap');
-$primary-color: #0004ff;
-$accent-color: hwb(247 0% 52% / 0.934);
- 
-$error-color: #ff0000;
-$background-color: #dbdbdb;
-$background-nav-color: #f0f0f0;
-//text color
-$text-color: #232323;
-$navlinks-text-color: #232323;
+
+// Light mode variables
+$light-primary-color: hsl(239, 100%, 50%);
+$light-accent-color: hwb(253 24% 0%);
+$light-error-color: #ff0000;
+$light-bg-color: hsl(0, 0%, 100%);
+$light-bg-nav-color: hsl(0, 0%, 100%);
+$light-text-color: #1e1e1e;
+$light-navlinks-text-color: #414141;
+$light-navlinks-text-active-color: #0004ff;
+
+// Dark mode variables
+$dark-primary-color: #0004ff;
+$dark-accent-color: hwb(253 56% 0%);
+$dark-error-color: #ff0000;
+$dark-bg-color: #363636;
+$dark-bg-nav-color: #363636;
+$dark-text-color: #ebebeb;
+$dark-navlinks-text-color: #ebebeb;
+$dark-navlinks-text-active-color: hsl(243, 100%, 87%);
+
 // Font sizes
 $font-size-small: 12px;
 $font-size-medium: 16px;
@@ -19,8 +31,8 @@ $font-weight-normal: 300;
 $font-weight-bold: 500;
 
 // Font families
-$font-family-primary: 'ubuntu';
-$font-family-secondary: 'ubuntu';
+$font-family-primary: 'Ubuntu';
+$font-family-secondary: 'Ubuntu';
 
 // Spacing
 $spacing-small: 8px;

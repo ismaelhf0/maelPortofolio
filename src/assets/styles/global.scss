@@ -1,13 +1,46 @@
-// src/styles/global.scss
-
 @import './variables';
-@import './mixins';
-@import './themes/light_navbarController.scss';
+
+:root {
+  --primary-color: #{$light-primary-color};
+  --accent-color: #{$light-accent-color};
+  --error-color: #{$light-error-color};
+  --bg-color: #{$light-bg-color};
+  --bg-nav-color: #{$light-bg-nav-color};
+  --text-color: #{$light-text-color}; 
+  --navlinks-text-color: #{$light-navlinks-text-color};
+  --navlinks-text-active-color: #{$light-navlinks-text-active-color};
+
+  --font-size-small: #{$font-size-small};
+  --font-size-medium: #{$font-size-medium};
+  --font-size-large: #{$font-size-large};
+
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-bold: #{$font-weight-bold};
+
+  --font-family-primary: #{$font-family-primary};
+  --font-family-secondary: #{$font-family-secondary};
+
+  --spacing-small: #{$spacing-small};
+  --spacing-medium: #{$spacing-medium};
+  --spacing-large: #{$spacing-large};
+}
+
+[data-theme="dark"] {
+  --primary-color: #{$dark-primary-color};
+  --accent-color: #{$dark-accent-color};
+  --error-color: #{$dark-error-color};
+  --bg-color: #{$dark-bg-color};
+  --bg-nav-color: #{$dark-bg-nav-color};
+  --text-color: #{$dark-text-color};
+  --navlinks-text-color: #{$dark-navlinks-text-color};
+  --navlinks-text-active-color: #{$dark-navlinks-text-active-color};
+}
 
 body {
-  background-color: $background-color;
-  color: $text-color;
-  font: $font-large-bold;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family-primary);
   margin: 0;
   padding: 0;
 }
+

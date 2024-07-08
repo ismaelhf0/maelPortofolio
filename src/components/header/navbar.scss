@@ -1,10 +1,9 @@
 @import '../../assets/styles/global.scss';
-
-
+@import './../../assets/styles/variables.scss';
 
 .navbar {
   height: 60px;
-  background-color: $background-nav-color;
+  background-color: var(--bg-nav-color);
   position: relative;
 }
 
@@ -18,6 +17,7 @@
   justify-content: space-between;
   height: 100%;
 }
+
 .brand {
   position: relative;
   max-width: 60px;
@@ -33,16 +33,17 @@
   right: 0px;
   top: 20px;
   margin-right: 17px;
-
   opacity: 0; /* Initial opacity */
   transition: opacity 0.6s ease-in-out;
 }
+
 .FaMenuIcon,
 .FaCloseIcon {
-  color: $stroke-nav-icon-color;
+  color: var(--accent-color);
   font-size: 1.4rem;
   transition: transform 0.2s;
 }
+
 .nav-elements-container ul {
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
@@ -53,19 +54,20 @@
   display: flex;
   justify-content: space-between;
 }
+
 .nav-elements-container ul li:not(:last-child) {
   margin-right: 60px;
 }
+
 .nav-elements-container ul a {
-  font: $nav-links-text-style;
-  color: $nav-links-text-color;
+  font: var(--font-small-normal);
+  color: var(--navlinks-text-color);
 }
 
 .nav-elements-container ul a.active {
-  font: $nav-links-text-active-style;
-  color: $nav-links-text-color-active;
+  font: var(--font-small-bold);
+  color: var(--navlinks-text-active-color);
   position: relative;
-
 }
 
 .nav-elements-container ul a.active::after {
@@ -75,16 +77,16 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: $nav-links-decoration-stroke-color;
+  background-color: var(--accent-color);
 }
 
-@media screen and (max-width: '568px') {
+@media screen and (max-width: 568px) {
   .nav-elements-container {
     z-index: 100;
     position: absolute;
     right: 0;
     top: 0px;
-    background-color: $background-nav-color;
+    background-color: var(--bg-nav-color);
     width: 0;
     height: 100vh;
     transition: all 0.3s ease-in;
@@ -95,6 +97,7 @@
     display: block;
     cursor: pointer;
   }
+
   .nav-elements-container.active {
     width: 270px;
   }
@@ -102,12 +105,14 @@
   .OpenMenuIcon.active {
     display: none;
   }
+
   .CloseMenuIcon.active {
     visibility: visible;
     opacity: 1; /* Initial opacity */
   }
+
   .nav-elements-container ul {
-    //  nav menu elements for mobile
+    /* Nav menu elements for mobile */
     padding: 0 30px 0; /* Remove default padding */
     margin-top: 80px; /* Remove default margin */
   }
@@ -117,15 +122,16 @@
     flex-direction: column;
     justify-content: right;
   }
+
   .nav-elements-container ul li:not(:last-child) {
     margin-bottom: 30px;
   }
- 
-  // menubutton
 
+  /* Menu button */
   .OpenMenuIcon {
     display: block;
   }
+
   .blur {
     visibility: hidden;
     position: fixed;
@@ -134,26 +140,24 @@
     width: 100vh;
     background: black;
     opacity: 0;
-
-    //this dosn't work as wanted whe we change the screen to mobile it starts dark and and then transitions to no opacity we are gonna keep it that way
-
-    //transition: opacity 0.65s ease-in-out, visibility 0s 0.65s;
+    /* This doesn't work as wanted when we change the screen to mobile; it starts dark and then transitions to no opacity. We are going to keep it that way */
+    /* transition: opacity 0.65s ease-in-out, visibility 0s 0.65s; */
   }
+
   .blur.active {
     visibility: visible;
     opacity: 0.5;
-
     transition: opacity 0.65s ease-in-out, visibility 0s 0s;
   }
 }
 
-@media screen and (min-width: '768px') {
+@media screen and (min-width: 768px) {
   .header {
     padding: pxToRem(40);
   }
 }
 
-@media screen and (min-width: '1024px') {
+@media screen and (min-width: 1024px) {
   .header {
     padding: pxToRem(40);
   }

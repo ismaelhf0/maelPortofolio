@@ -4,7 +4,7 @@ import './navbar.scss'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-
+import Switch from './../../components/themeToggle/Switch';
 const Navbar = () => {
   const [shownavbar, setshownavbar] = useState(false)
   const handleShowNavbar = () => {
@@ -27,8 +27,8 @@ const Navbar = () => {
             <img className="brand " src={logo} alt="logo" />
           </NavLink>
         </div>
-
         <div
+        
           className={`OpenMenuIcon ${shownavbar && 'active'}`}
           onClick={handleShowNavbar}
         >
@@ -48,6 +48,10 @@ const Navbar = () => {
 
           <ul className="navUl">
             <li>
+
+        <Switch />
+            </li>
+            <li>
               <NavLink onClick={handleClickedNavLink} to={'/project'}>
                 project
               </NavLink>
@@ -62,7 +66,6 @@ const Navbar = () => {
                 contact
               </NavLink>
             </li>
-            
           </ul>
         </div>
       </div>
