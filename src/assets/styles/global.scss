@@ -23,6 +23,7 @@
   --spacing-small: #{$spacing-small};
   --spacing-medium: #{$spacing-medium};
   --spacing-large: #{$spacing-large};
+  
 }
 
 [data-theme="dark"] {
@@ -37,7 +38,7 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-family-primary);
   margin: 0;

@@ -1,9 +1,9 @@
 .footer {
-  background-color: #282c34;
-  color: #ffffff;
+  background-color: var(--bg-nav-color);
+  color:  var(--navlinks-text-color);
   padding: 2rem 1rem;
   text-align: left;
-
+  border-top: 2px rgba(143, 143, 143, 0.428) solid;
   .brand-footer {
     width: 180px; /* Adjust as needed */
   }
@@ -49,7 +49,7 @@
         font-size: 1.2rem;
 
         a {
-          color: #ffffff;
+          color: var(--navlinks-text-color);
           text-decoration: none;
           transition: color 0.3s;
 
