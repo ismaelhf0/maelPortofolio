@@ -2,26 +2,46 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+// Light mode variables (Grayscale)
+$light-primary-color: #333333;
+$light-accent-color: #4d4d4d;
+$light-error-color: #b30000;
+$light-bg-color: #f0f0f0;
+$light-bg-nav-color: #e6e6e6;
+$light-text-color: #1a1a1a;
+$light-navlinks-text-color: #4d4d4d;
+$light-navlinks-text-active-color: #666666;
 
-// Light mode variables
-$light-primary-color: hsl(239, 100%, 50%);
-$light-accent-color: #353535;
-$light-error-color: #ff0000;
-$light-bg-color: hsl(0, 0%, 100%);
-$light-bg-nav-color: hsl(0, 0%, 100%);
-$light-text-color: #1e1e1e;
-$light-navlinks-text-color: #414141;
-$light-navlinks-text-active-color: #0004ff;
+$light-hero-button-bg-color: #3b3b3b;
+$light-hero-button-bg-active-color: #9c9c9c;
+$light-hero-button-bg-shadow-size-color: 3px 3px #626262;
+$light-hero-button-text-color: #e6e6e6;
 
-// Dark mode variables
-$dark-primary-color: #0004ff;
-$dark-accent-color: hwb(253 56% 0%);
-$dark-error-color: #ff0000;
-$dark-bg-color: #363636;
-$dark-bg-nav-color: #363636;
-$dark-text-color: #ebebeb;
-$dark-navlinks-text-color: #ebebeb;
-$dark-navlinks-text-active-color: hsl(243, 100%, 87%);
+$light-hero-primary-button-bg-color: #66666600;
+$light-hero-primary-button-bg-active-color: #4d4d4d;
+$light-hero-primary-button-bg-shadow-size-color: 3px 3px #626262;
+$light-hero-primary-button-text-color: #333333;
+
+// Dark mode variables (Grayscale)
+$dark-primary-color: #333333;
+$dark-accent-color: #4d4d4d;
+$dark-error-color: #b30000;
+$dark-bg-color: #1a1a1a;
+$dark-bg-nav-color: #262626;
+$dark-text-color: #e0e0e0;
+$dark-navlinks-text-color: #e0e0e0;
+$dark-navlinks-text-active-color: #999999;
+
+// Dark hero buttons variables 
+$dark-hero-button-bg-color: #f0f0f0;
+$dark-hero-button-bg-active-color: #666666;
+$dark-hero-button-bg-shadow-size-color: 3px 3px #626262;
+$dark-hero-button-text-color: #1a1a1a;
+$dark-hero-primary-button-bg-color: #4d4d4d;
+$dark-hero-primary-button-bg-active-color: #666666;
+$dark-hero-primary-button-bg-shadow-size-color: 3px 3px #626262;
+$dark-hero-primary-button-text-color: #e0e0e0;
+
 
 // Font sizes
 $font-size-small: 12px;

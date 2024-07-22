@@ -1,0 +1,16 @@
+
+@import "./../../../assets/styles/global.scss";
+.brand-footer{
+    svg{
+        width:45px; 
+    }
+    svg path {
+        fill: var(--text-color); 
+        stroke: var(--text-color);
+      }
+
+      rect{
+        stroke: var(--text-color);
+      }
+    }
+

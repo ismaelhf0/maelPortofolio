@@ -1,10 +1,9 @@
 import { NavLink } from 'react-router-dom'
-import logo from './../../assets/images/logo.png'
 import './navbar.scss'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-import Switch from './../../components/themeToggle/Switch';
+import Switch from './../../components/themeToggle/Switch'
 const Navbar = () => {
   const [shownavbar, setshownavbar] = useState(false)
   const handleShowNavbar = () => {
@@ -24,11 +23,15 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           <NavLink className="home" to={'/'}>
-            <img className="brand " src={logo} alt="logo" />
+            <div className="brand-text">
+              <div className="logo-container">
+              </div>
+              Hajfani
+              <span className="lastname"> ismail</span>
+            </div>
           </NavLink>
         </div>
         <div
-        
           className={`OpenMenuIcon ${shownavbar && 'active'}`}
           onClick={handleShowNavbar}
         >
@@ -48,8 +51,7 @@ const Navbar = () => {
 
           <ul className="navUl">
             <li>
-
-        <Switch />
+              <Switch />
             </li>
             <li>
               <NavLink onClick={handleClickedNavLink} to={'/project'}>

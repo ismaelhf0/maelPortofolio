@@ -10,9 +10,22 @@
   --navlinks-text-color: #{$light-navlinks-text-color};
   --navlinks-text-active-color: #{$light-navlinks-text-active-color};
 
+  --hero-button-bg-color:#{$light-hero-button-bg-color};
+  --hero-button-bg-active-color:#{$light-hero-button-bg-active-color};
+  --hero-button-bg-shadow-size-color:#{$light-hero-button-bg-shadow-size-color};
+  --hero-button-text-color:#{$light-hero-button-text-color};
+
+  --hero-primary-button-bg-color:#{$light-hero-primary-button-bg-color};
+  --hero-primary-button-bg-active-color:#{$light-hero-primary-button-bg-active-color};
+  --hero-primary-button-bg-shadow-size-color:#{$light-hero-primary-button-bg-shadow-size-color};
+  --hero-primary-button-text-color:#{$light-hero-primary-button-text-color};
+
+
+
+
   --font-size-small: #{$font-size-small};
   --font-size-medium: #{$font-size-medium};
-  --font-size-large: #{$font-size-large};
+    --font-size-large: #{$font-size-large};
 
   --font-weight-normal: #{$font-weight-normal};
   --font-weight-bold: #{$font-weight-bold};
@@ -35,6 +48,19 @@
   --text-color: #{$dark-text-color};
   --navlinks-text-color: #{$dark-navlinks-text-color};
   --navlinks-text-active-color: #{$dark-navlinks-text-active-color};
+
+  --hero-button-bg-color:#{$dark-hero-button-bg-color};
+  --hero-button-bg-active-color:#{$dark-hero-button-bg-active-color};
+  --hero-button-bg-shadow-size-color:#{$dark-hero-button-bg-shadow-size-color};
+  --hero-button-text-color:#{$dark-hero-button-text-color};
+
+  --hero-primary-button-bg-color:#{$dark-hero-primary-button-bg-color};
+  --hero-primary-button-bg-active-color:#{$dark-hero-primary-button-bg-active-color};
+  --hero-primary-button-bg-shadow-size-color:#{$dark-hero-primary-button-bg-shadow-size-color};
+  --hero-primary-button-text-color:#{$dark-hero-primary-button-text-color};
+
+
+
 }
 
 body {

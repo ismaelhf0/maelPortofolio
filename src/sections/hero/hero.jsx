@@ -1,7 +1,6 @@
+
+import LogoSvg from "../../assets/images/s3.svg?react"
 import './hero.scss'
-import heroImage from './../../assets/images/hero-img2.svg'
-
-
 
 const Hero = () => {
   return (
@@ -15,7 +14,7 @@ const Hero = () => {
           </p>
           <div className="button-wraper">
           <button className= "button-primary">
-            learn more 
+            Learn more 
           </button>
           <button className= "button">
             Contact me !
@@ -26,9 +25,9 @@ const Hero = () => {
 
       </div>
       <div className="hero-image">
-
-          <img src={heroImage} alt="hero" />
-        </div>
+        
+      <LogoSvg  />
+             </div>
     </section>
   )
 }

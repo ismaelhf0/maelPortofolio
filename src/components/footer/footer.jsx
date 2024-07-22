@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
+import Logo from '../../assets/images/logo/logo'
 import './footer.scss'
-import logo from './../../assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 const footer = () => {
@@ -10,8 +10,8 @@ const footer = () => {
         <div className="footer-container">
           <div className="footer-section">
           <div className="logo">
-          <NavLink className="home" to={'/'}>
-            <img className="brand-footer " src={logo} alt="logo" />
+          <NavLink className="brand-footer" to={'/'}>
+            <Logo />
           </NavLink>
         </div>
           </div>
@@ -49,8 +49,9 @@ const footer = () => {
         <hr className="my-8 border-blue-gray-50" />
         <div className="footer-bottom">
         <div className="logo">
-          <NavLink className="home" to={'/'}>
-            <img className="brand-bottom-footer " src={logo} alt="logo" />
+          <NavLink className="brand-bottom-footer" to={'/'}>
+
+          <Logo />
           </NavLink>
         </div>
           <span>
