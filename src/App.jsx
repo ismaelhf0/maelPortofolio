@@ -5,6 +5,7 @@ import Hero from './sections/hero/hero.jsx'
 import './reset.css'; // or './reset.css'
 import Footer from './components/footer/footer.jsx'
 import About from './sections/section-one/section-one.jsx'
+import Projects from "./sections/section-two/projects.jsx";
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
     <Navbar />
     <Hero />
     <About />
+    <Projects />
       <Footer />
     
 </BrowserRouter>

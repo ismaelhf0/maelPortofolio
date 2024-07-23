@@ -1,0 +1,76 @@
+/* src/components/projectCard.scss */
+
+.projectCard-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .projectCard-container:hover {
+    transform: scale(1);
+  }
+  
+  .project-image {
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* width and height are equal proportion */
+    
+  }
+  
+  .project-title {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+  
+  .project-description {
+    font-size: 1em;
+    margin: 0.5em 0;
+  }
+  
+  .project-skills {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  
+  .project-skills li {
+    background-color: var(--bg-color);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+  }
+  
+  .project-links {
+   
+  margin-top: 1em;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+  
+  .project-link {
+
+    
+    
+    
+    
+    padding: 0.5em 1em;
+    margin: 0.5em;
+
+    background-color: #767676;
+    color: #fff;
+    text-decoration: none;
+    
+    border-radius: 4px;
+  }
+  

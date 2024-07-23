@@ -1,0 +1,27 @@
+/* src/components/projects.scss */
+@import "./../../assets/styles/global.scss";
+@import "./../../assets/styles/variables.scss";
+
+.projects-section {
+    padding: 2em 0;
+    background-color: var(--bg-color);
+  }
+  
+  .projects-title {
+    font: bold 52px Poppins;
+margin-bottom: 1rem;
+margin-top: 0;
+text-align: center;
+    
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+    justify-content: center;
+    align-items: start;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
