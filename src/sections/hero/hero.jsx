@@ -1,5 +1,5 @@
 
-import LogoSvg from "../../assets/images/s3.svg?react"
+import LogoSvg from "../../assets/images/s3.svg"//?react 
 import './hero.scss'
 
 const Hero = () => {
