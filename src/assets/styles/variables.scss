@@ -11,6 +11,7 @@ $light-bg-nav-color: #e6e6e6;
 $light-text-color: #1a1a1a;
 $light-navlinks-text-color: #4d4d4d;
 $light-navlinks-text-active-color: #666666;
+$light-shadow-color: rgba(66, 66, 66, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
 $light-hero-button-bg-color: #3b3b3b;
 $light-hero-button-bg-active-color: #9c9c9c;
@@ -31,6 +32,7 @@ $dark-bg-nav-color: #262626;
 $dark-text-color: #e0e0e0;
 $dark-navlinks-text-color: #e0e0e0;
 $dark-navlinks-text-active-color: #999999;
+$dark-shadow-color: rgba(245, 245, 245, 0.034) 0px 3px 7px, rgba(221, 221, 221, 0.2) 0px 3px 6px;
 
 // Dark hero buttons variables 
 $dark-hero-button-bg-color: #f0f0f0;

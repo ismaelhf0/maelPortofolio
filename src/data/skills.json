@@ -1,0 +1,25 @@
+{
+  "Frontend": [
+    { "name": "JavaScript", "icon": "src/assets/images/skills/javascript-plain.svg" },
+    { "name": "TypeScript", "icon": "src/assets/images/skills/typescript-plain.svg" },
+    { "name": "Angular", "icon": "src/assets/images/skills/angular-original.svg" },
+    { "name": "React", "icon": "src/assets/images/skills/react-original.svg" },
+    { "name": "Vue.js", "icon": "src/assets/images/skills/vuejs-plain.svg" }
+  ],
+  "Styling": [
+    { "name": "Bootstrap", "icon": "src/assets/images/skills/bootstrap-original.svg" },
+    { "name": "Bulma", "icon": "src/assets/images/skills/bulma-plain.svg" },
+    { "name": "CSS3", "icon": "src/assets/images/skills/css3-plain.svg" },
+    { "name": "D3.js", "icon": "src/assets/images/skills/d3js-plain.svg" },
+    { "name": "HTML5", "icon": "src/assets/images/skills/html5-plain.svg" },
+    { "name": "Sass", "icon": "src/assets/images/skills/sass-original.svg" }
+  ],
+  "Backend": [
+    { "name": "Express", "icon": "src/assets/images/skills/express-original.svg" },
+    { "name": "GraphQL", "icon": "src/assets/images/skills/graphql-plain.svg" },
+    { "name": "Java", "icon": "src/assets/images/skills/java-plain.svg" },
+    { "name": "Node.js", "icon": "src/assets/images/skills/nodejs-plain.svg" },
+    { "name": "Spring", "icon": "src/assets/images/skills/spring-original.svg" },
+    { "name": "Docker", "icon": "src/assets/images/skills/docker-plain.svg" }
+  ]
+}

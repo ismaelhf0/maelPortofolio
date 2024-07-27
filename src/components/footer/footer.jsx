@@ -10,10 +10,16 @@ const footer = () => {
         <div className="footer-container">
           <div className="footer-section">
           <div className="logo">
-          <NavLink className="brand-footer" to={'/'}>
-            <Logo />
+          <NavLink className="home" to={'/'}>
+            <div className="brand-text">
+              <div className="logo-container">
+              </div>
+              Hajfani
+              <span className="lastname"> ismail</span>
+            </div>
           </NavLink>
         </div>
+        
           </div>
           <div className="footer-section">
             <h3>Contact</h3>

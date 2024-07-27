@@ -1,0 +1,35 @@
+.skills-section {
+  padding: 2rem;
+  background-color: var(--bg-color);
+
+  .skills-title {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skills-category {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #dddddd00;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+
+    h3 {
+      text-align: left;
+      margin-bottom: 1rem;
+      font-size: 3rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

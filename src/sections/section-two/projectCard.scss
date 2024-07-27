@@ -1,38 +1,48 @@
 /* src/components/projectCard.scss */
 
 .projectCard-container {
-    border: 1px solid #ddd;
+    border: 0.1px solid #dddddda1;
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
     transition: transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     margin: 1em;
     padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    .projectCard-title{
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
   }
   
   .projectCard-container:hover {
-    transform: scale(1);
+    transform: scale(1.1);
   }
   
   .project-image {
+    
     object-fit: cover;
     aspect-ratio: 1 / 1; /* width and height are equal proportion */
-    
+    border-radius: 5px;
+    box-shadow: var(--shadow-0)
   }
+ 
   
   .project-title {
     font-size: 1.5em;
     margin: 0.5em 0;
   }
   
-  .project-description {
+  .projectCard-desc {
     font-size: 1em;
-    margin: 0.5em 0;
+    margin: 0.5em 0 14px 0;
+    
   }
+
   
   .project-skills {
     list-style-type: none;
@@ -44,15 +54,26 @@
   }
   
   .project-skills li {
-    background-color: var(--bg-color);
+    background-color: var(--text-color);
     padding: 0.5em 1em;
     border-radius: 4px;
+    color: var(--bg-color);
   }
-  
+  .title-links-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+
+
+
+  }
   .project-links {
    
+ 
   margin-top: 1em;
-  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -62,13 +83,13 @@
 
     
     
-    
+
     
     padding: 0.5em 1em;
     margin: 0.5em;
-
-    background-color: #767676;
-    color: #fff;
+    opacity:0.9;
+    background-color: var(--text-color);
+    color: var(--bg-color);
     text-decoration: none;
     
     border-radius: 4px;

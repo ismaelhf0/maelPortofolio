@@ -1,6 +1,6 @@
 
 import './section-one.scss'
-import portraitimg from "./../../assets/images/about-img.jpg"
+import portraitimg from "./../../assets/images/about-img.png"
 const About = () => {
   return (
     <section className="about-section">

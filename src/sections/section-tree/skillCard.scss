@@ -1,0 +1,35 @@
+/* src/components/projectCard.scss */
+
+
+.skill-card-container {
+  
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+align-items: center;
+
+width: fit-content;
+
+
+background-color: var(--bg-color);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    color: var(--text-color);
+}
+.skill-card-name {
+position: relative;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.skill-card-icon {
+ img{
+  width: 50px;
+  filter: grayscale(1);
+  transition-duration: 500ms;
+  margin-right: 5px;
+}
+ :hover{filter: grayscale(0)
+  
+}
+}

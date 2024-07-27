@@ -1,6 +1,6 @@
 
-import LogoSvg from "../../assets/images/s3.svg"//?react 
-import './hero.scss'
+import LogoSvg from "../../assets/images/pendule.svg?react";  // Adjust the path as necessary
+import './hero.scss';
 
 const Hero = () => {
   return (
@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
       <div className="hero-image">
         
-      <LogoSvg  />
+      <LogoSvg />
              </div>
     </section>
   )

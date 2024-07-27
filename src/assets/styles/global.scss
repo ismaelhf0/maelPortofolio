@@ -9,6 +9,7 @@
   --text-color: #{$light-text-color}; 
   --navlinks-text-color: #{$light-navlinks-text-color};
   --navlinks-text-active-color: #{$light-navlinks-text-active-color};
+  --shadow-0: #{$light-shadow-color};
 
   --hero-button-bg-color:#{$light-hero-button-bg-color};
   --hero-button-bg-active-color:#{$light-hero-button-bg-active-color};
@@ -48,6 +49,7 @@
   --text-color: #{$dark-text-color};
   --navlinks-text-color: #{$dark-navlinks-text-color};
   --navlinks-text-active-color: #{$dark-navlinks-text-active-color};
+  --shadow-0: #{$dark-shadow-color};
 
   --hero-button-bg-color:#{$dark-hero-button-bg-color};
   --hero-button-bg-active-color:#{$dark-hero-button-bg-active-color};
