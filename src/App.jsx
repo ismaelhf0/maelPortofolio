@@ -8,6 +8,7 @@ import Footer from './components/footer/footer.jsx'
 import About from './sections/section-one/section-one.jsx'
 import Projects from "./sections/section-two/projects.jsx";
 import Skills from "./sections/section-tree/skills.jsx";
+import Contact from "./sections/contact/contact.jsx";
 function App() {
 
   return (
@@ -18,6 +19,8 @@ function App() {
     <About />
     <Projects />
     <Skills />
+    <Contact />
+    
       <Footer />
     
 </BrowserRouter>
