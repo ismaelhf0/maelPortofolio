@@ -1,93 +1,129 @@
-import { useState } from 'react'
-import './contact.scss'
+import { useState, useRef, Children } from 'react'
 import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot'
+import './contact.scss'
+import {
+  faEnvelope,
+  faPhone,
+  faLocationDot,
+} from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [stateMessage, setStateMessage] = useState(null)
+  const form = useRef()
+   const [FormDone, setFormDone] = useState(true)
+  const closeShowNavbar = () => { //this is to close 
+    setFormDone(!FormDone)
+  }
+  const handleshowFormDone = () => { // this is to trigger the formDone 
+    setFormDone(!FormDone)
+  }
 
-  const sendEmail = (e) => {
-    e.persiste()
 
+  const sendEmail = async (e) => {
     e.preventDefault()
-
     setIsSubmitting(true)
+    setTimeout(() => {
+      setStateMessage(null)
+    }, 5000)
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_template_ID,
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         e.target,
-        process.env.REACT_APP_PUBLIC_KEY
+        import.meta.env.VITE_PUBLIC_KEY
       )
-
-      .then((result) => {
-        setStateMessage('Message sent!')
-        setIsSubmitting(false)
-
-        setTimeout(() => {
-          setStateMessage(null)
-        }, 5000)
-      })
-    e.target.reset()
+      setStateMessage('Message sent!')
+      console.log('message sent');
+         handleshowFormDone(); // Open the modal on successful email submission
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setStateMessage('Failed to send message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+      e.target.reset()
+    }
   }
 
   return (
     <div className="contact-section">
+      <button onClick={handleshowFormDone}>form</button>
       <h3 className="contact-section-title">Contact</h3>
       <div className="contact-container">
-        <div className="form-container">
-          <div className="flags-form-container">
-            <button className="flags-contact-button">flags</button>
-            <button className="flags-contact-button">flags</button>
-            <button className="flags-contact-button">flags</button>
-            <button className="flags-contact-button">flags</button>
-            <button className="flags-contact-button">flags</button>
+        <div className='form-parent' >
+          <div className={`form-done-container ${!FormDone && 'active'}`} >
+          <div className="form-done-wrapper">
+            <div className="form-done-content">
+              <p>thank you sending me an email</p>
+              <button className='button-primary' onClick={closeShowNavbar} >try again</button>
+
+            </div>
           </div>
-          <form onSubmit={sendEmail}>
+
+
+
+          </div>
+
+
+
+        <div className={`form-container ${FormDone && 'active'}`}>
+
+          <div className="flags-form-container">
+            <button className="flags-contact-button">Flags</button>
+            <button className="flags-contact-button">Flags</button>
+            <button className="flags-contact-button">Flags</button>
+            <button className="flags-contact-button">Flags</button>
+            <button className="flags-contact-button">Flags</button>
+          </div>
+          <form ref={form} name="contactform" onSubmit={sendEmail}>
             <div className="form-div-contact">
-              <label>Name:</label>
-              <input type="text" name="user_name" />
+              <label>
+                Name:
+                <input type="text" name="user_name" />
+              </label>
             </div>
             <div className="form-div-contact">
-              <label>email:</label>
-              <input type="email" name="user_email" />
+              <label>
+                Email:
+                <input type="email" name="user_email" />
+              </label>
             </div>
             <div className="form-div-contact">
-              <label>Your message:</label>
-              <textarea
-                name="User_message"
-                id="message"
-                aria-placeholder="write something"
-              ></textarea>
+              <label>
+                Your message:
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Write something"
+                ></textarea>
+              </label>
             </div>
             <div className="form-div-submit-contact">
               <button
                 className="submit-contact-button"
                 type="submit"
-                value="send"
                 disabled={isSubmitting}
               >
-                send
+                Send
               </button>
+             { {stateMessage} && <p>{stateMessage}</p>}
             </div>
-            {stateMessage && <p> {stateMessage}</p>}
           </form>
-       
-       
-       
-       
+          </div>
+
+
+
+
+
         </div>
 
         <div className="sideText-container">
           <h3 className="sideText-title">
-            Let’s discuss on something cool together
+            Let’s discuss something cool together
           </h3>
-
           <div className="info-contact-container">
             <ul>
               <li>
@@ -100,11 +136,10 @@ const Contact = () => {
               </li>
               <li>
                 <FontAwesomeIcon icon={faLocationDot} />{' '}
-                <span>Rabat Morroco</span>
+                <span>Rabat, Morocco</span>
               </li>
             </ul>
           </div>
-
           <div className="social-media-contact-section">
             <ul className="social-media-contact-ul">
               <li>
@@ -127,10 +162,6 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-
-
-
-
         </div>
       </div>
     </div>

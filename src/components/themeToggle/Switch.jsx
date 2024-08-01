@@ -9,7 +9,7 @@ const ThemeSwitcher = () => {
                     <span className='switchlabel'>{theme}</span>
 
             <label className="switch">
-        <input type="checkbox" onChange={handleChange} checked={theme === 'dark'} />
+        <input name='theme-switch' type="checkbox" onChange={handleChange} checked={theme === 'dark'} />
         <span className="slider"></span>
     </label>
            

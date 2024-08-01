@@ -1,0 +1,38 @@
+@import "./../../assets/styles/global.scss";
+
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+
+    
+}
+
+.modal-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    
+    position: fixed;
+  inset: 0px;
+    width: fit-content;
+    height: fit-content;
+  margin: auto;
+
+
+    
+}
+
+.modal-content {
+    text-align: center;
+    font-size: 2.3rem;
+}
