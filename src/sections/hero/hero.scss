@@ -2,111 +2,73 @@
 @import './../../assets/styles/variables.scss';
 
 .hero-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 0px;
+display: block;
   max-width: 80.6vw;
+  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem 1rem;
-  min-height: 80vh;
+  padding: 0rem 1rem;
+  display: grid;
+  place-items:center;
+
+  text-align: center;
+  
   @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin: 0;
     max-width: 100vw;
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 0.5rem;
 
   }
-  .hero-image{
-    svg{
-      polygon{
-        fill: var(--text-color)!important; // Apply the color variable to the rect stroke
-
-      }
-      circle {
-      fill: var(--text-color)!important; // Apply the color variable to the rect stroke
-        mix-blend-mode: difference!important;
-    }
-    
-  }
-  }
-}
-
-.hero_section-wrapper {
-  grid-area: 1 / 1 / 2 / 2;
-  min-width: 676px;
-
-  @media (max-width: 768px) {
-    order: 1;
-    min-width: 300px;
-  }
-}
-
-.hero-image {
-  grid-area: 1 / 2 / 2 / 3;
-justify-self: end ;  
-  svg{
-
-   
 
 
-    min-height: 550px;
-    max-height: 700px;
-  }
- 
-  @media (max-width: 1000px) {
-    order: revert;
-    svg {
-      
-      max-height: 273px;
-      min-height: 240px;
-      display: block;
-      margin: 0 auto;
-      height: auto;
-      border-radius: 10px;
-    }
-  }
 }
 
 .content-hero-wrapper {
   .hero-title {
-    font: $font-x-title-large-bold;
-    margin-bottom: 1rem;
+    font-size: clamp(1.513rem, 4.367vw + 0.439rem, 5.625rem);
+    line-height: clamp(1.969rem, 5.411vw + 0.886rem, 7.313rem);
 
+
+    font-family: 'poppins';
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0;
     @media (max-width: 768px) {
-      font: 700 40px Poppins;
+    
+      text-align: left;
     }
   }
 
   .hero-description {
-    font: $font-s-desc-large-bold;
-    margin-bottom: 2rem;
-    line-height: 45px;
+    font-size: clamp(1rem, 1.013vw + 0.797rem, 2rem);
+    line-height: clamp(1.5rem, 1.114vw + 1.277rem, 2.6rem);
+         font-family: 'poppins';
+    font-weight: 300;
 
+    text-align: center;
+    margin-bottom: 2rem;
+    
     @media (max-width: 768px) {
-      font: 300 15px Poppins;
+      text-align: left;
+
     }
   }
-
-
 }
+
+
 
 .button {
   font-family: Poppins;
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 0.608vw + 0.778rem, 1.5rem);
   color: var(--hero-button-text-color);
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 10px;
-  border: 2px solid #363636;//create variable
+  border: 2px solid #363636; //create variable
   background: var(--hero-button-bg-color);
   box-shadow: var(--hero-button-bg-shadow-size-color);
   cursor: pointer;
-  margin: 35px;
+  margin-left: 35px;  
 
   &:active {
     box-shadow: none;
@@ -114,38 +76,28 @@ justify-self: end ;
   }
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
-    margin: 0 10px 30px;
-  }
+    margin-left: 16px;
+}
 }
 
 .button-primary {
   font-family: Poppins;
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 0.608vw + 0.778rem, 1.5rem);
   color: var(--hero-primary-button-text-color);
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 10px;
-  border: 2px solid #2c2c2c;//create a variable
+  border: 2px solid #2c2c2c; //create a variable
   background: var(--hero-primary-button-bg-color);
   box-shadow: var(--hero-primary-button-bg-shadow-size-color);
   cursor: pointer;
-  margin: 35px 0;
-
+  margin-left: 0px;  
   &:active {
     box-shadow: none;
     transform: translate(3px, 3px);
+    
   }
 
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-    margin: 0 10px 30px;
-  }
+
 }
-
-
-
-     
-    
-    

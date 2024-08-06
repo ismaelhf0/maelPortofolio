@@ -23,18 +23,32 @@ const Contact = () => {
   }
 
   const handleshowFormDone = () => {
-    setFormDone(true)
+    setFormDone(true) 
     console.log(FormDone)
   }
 
   const handleFlagClick = (flag) => {
-    setSelectedFlags((prevFlags) =>
-      prevFlags.includes(flag)
-        ? prevFlags.filter((f) => f !== flag)
-        : [...prevFlags, flag]
-    )
-    console.log(selectedFlags)
-  }
+    // Update the state variable 'selectedFlags' with a function
+    setSelectedFlags((prevFlags) => {
+      // Declare a variable to hold the new state
+      let newFlags;
+  
+      // Check if 'flag' is already in the previous state 'prevFlags'
+      if (prevFlags.includes(flag)) {
+        // If 'flag' is in 'prevFlags', filter it out to remove it
+        newFlags = prevFlags.filter((f) => f !== flag);
+      } else {
+        // If 'flag' is not in 'prevFlags', add it to the array
+        newFlags = [...prevFlags, flag];
+      }
+  
+      // Return the new state to update 'selectedFlags'
+      return newFlags;
+    });
+  
+    // Log the current value of 'selectedFlags' to the console
+    console.log(selectedFlags);
+  };  
 
   const sendEmail = async (e) => {
     e.preventDefault()
@@ -132,7 +146,7 @@ const Contact = () => {
             <h3 className="flag-title">I’m interested in...</h3>
             <div className="flag-form-container-widthController">
               <div className="flags-form-container">
-                {['Flag1', 'Flag2', 'Flag3', 'Flag4', 'Flag5'].map((flag) => (
+                {['Flag1', 'Flag2', 'Flag3', 'Flag4', 'Flag5','Flag6', 'Flag7', 'Flag8', 'Flag9', 'Flag10'].map((flag) => (
                   <button
                     type="button"
                     key={flag}

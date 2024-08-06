@@ -7,8 +7,9 @@
 .navbar {
   height: 60px;
   background-color: var(--bg-nav-color);
-  position: relative;
-  margin-bottom: 45px;
+  position:   fixed;
+  width: 100vw;
+  z-index: 1;
 }
 
 .container {
