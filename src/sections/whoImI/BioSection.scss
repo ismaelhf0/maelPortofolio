@@ -1,0 +1,31 @@
+.scroll-section-outer {
+  overflow: hidden;
+}
+
+.scroll-section-inner {
+  height: 100vh;
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.title{
+  font-size: 50px;
+}
+.scroll-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: var(--bg-color);
+    }
+
+.scroll-section h3 {
+  color: var(--text-color);
+  letter-spacing: var(--headlineMedium);
+  font-size: 64px;
+  text-transform: uppercase;
+}
+
+

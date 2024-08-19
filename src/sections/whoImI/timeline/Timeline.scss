@@ -1,0 +1,154 @@
+/* src/Timeline.css */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700');
+
+
+.timelineContainer {
+  position: relative;
+    
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 0;
+}
+
+.timeline {
+  
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 50px;
+  
+}
+
+.li {
+  transition: all 200ms ease-in;
+  position: relative;
+  width: 750px;
+  text-align: center;
+}
+
+.timestamp {
+  margin-bottom: 20px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+}
+
+.status {
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #D6DCE0;
+  position: relative;
+  transition: all 200ms ease-in;
+}
+
+.status h4 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.status::before {
+  content: '';
+    width: 25px;
+      height: 25px;
+         background-color: white;
+          border-radius: 50%;
+            border: 1px solid #ddd;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms ease-in;
+
+  
+
+
+}
+
+
+
+.li.complete .status {
+  border-top: 2px solid #66DC71;
+}
+
+.li.complete .status::before {
+  background-color: #66DC71;
+  border: none;
+}
+
+.li.complete .status h4 {
+  color: #66DC71;
+}
+.li.complete:last-child .status{
+  border-image: linear-gradient(to right, #66DC71 50%, transparent 50%) 100% 1;
+}
+
+.li.complete:last-child .status::before{
+  background-color: #66DC71;
+  box-shadow: 0 0 0 0 rgb(0, 255, 26);
+	transform: scale(1);
+	animation: pulse 500ms infinite;
+  animation-name: pulse;
+ 
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgb(0, 255, 26, 0.7);
+    }
+  
+    70% {
+      transform: scale(1.5);
+      box-shadow: 0 0 0 10px rgb(0, 255, 26, 0);
+    }
+  
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+#toggleButton {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -60px;
+  background-color: #75C7F6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .status::before {
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .status {
+    padding-left: 60px;
+    text-align: left;
+  }
+
+  
+}

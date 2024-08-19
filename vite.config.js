@@ -8,4 +8,7 @@ export default defineConfig({
     react(),
     svgr(), // Add the SVGR plugin here
   ],
+  build: {
+    sourcemap: true, // Enable source maps
+  },
 })
